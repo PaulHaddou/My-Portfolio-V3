@@ -1,0 +1,17 @@
+@import "./breakpoints.scss";
+
+@mixin exemple {
+    font-size: 80px;
+    line-height: 1.3;
+    font-weight: 300;
+    color: $color-p-white;
+
+    //Tablet
+    @media (min-width: $bp-mobile) and (max-width: $bp-tablet) {
+        font-size: 72px;
+    }
+    //Mobile
+    @media (max-width: $bp-mobile) {
+        font-size: 56px;
+    }
+}

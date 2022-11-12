@@ -30,7 +30,8 @@ export default {
     '~/assets/styles/colors',
     '~/assets/styles/grid',
     '~/assets/styles/typography',
-    '~/assets/styles/animations'
+    '~/assets/styles/animations',
+    '~/assets/styles/global'
   ],
   styleResources: {
     scss: ['./assets/styles/*.scss']

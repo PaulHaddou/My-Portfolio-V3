@@ -1,3 +1,10 @@
 {
-  "home-test-message": "Bonjour"
+  "home-test-message": "Bonjour",
+  "navbar": {
+    "links": {
+      "contact": "Mail",
+      "resume": "CV",
+      "linkedin": "Linkedin"
+    }
+  }
 }

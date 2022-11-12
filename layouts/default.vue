@@ -1,14 +1,17 @@
 <template>
-  <div class="homeLayout">
+  <div class="defaultLayout">
+    <Navbar />
     <Nuxt />
   </div>
 </template>
 
 <script>
+import Navbar from '@/components/global/Navbar.vue'
 
 export default {
   name: 'DefaultLayout',
   components: {
+    Navbar
   }
 }
 </script>
@@ -25,14 +28,17 @@ export default {
   {
     margin: 0;
     position: relative;
-    font-family: 'mukta', sans-serif;
+    display: flex;
+    justify-content: center;
   }
-  .homeLayout
+  .defaultLayout
   {
     width: 100vw;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    position: relative;
-
+    @include grid;
+    max-width: $bp-max-width;
+    background-color: $color-p-white;
   }
 </style>

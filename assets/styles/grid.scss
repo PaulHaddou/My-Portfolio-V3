@@ -1,28 +1,47 @@
 @import "./breakpoints.scss";
 
+$gutter-desktop: 120px;
+$gutter-tablet: 32px;
+$gutter-mobile: 16px;
+
+$columns-desktop: 12;
+$columns-tablet: 12;
+$columns-mobile: 6;
+
+$grid-gap-desktop: 48px;
+$grid-gap-tablet: 24px;
+$grid-gap-mobile: 24px;
+
 @mixin grid {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-gap: 48px;
+    grid-template-columns: repeat($columns-desktop, minmax(0, 1fr));
+    grid-gap: $grid-gap-desktop;
     row-gap: 0;
-    padding: 0 120px;
+    padding: 0 $gutter-desktop;
 
     //Mobile
     @media (max-width: $bp-mobile) {
         display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        grid-gap: 24px;
+        grid-template-columns: repeat($columns-mobile, minmax(0, 1fr));
+        grid-gap: $grid-gap-mobile;
         row-gap: 0;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 0 $gutter-mobile;
     }
     //Tablet
     @media (min-width: $bp-mobile) and (max-width: $bp-tablet) {
         display: grid;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        grid-gap: 24px;
+        grid-template-columns: repeat($columns-tablet, minmax(0, 1fr));
+        grid-gap: $grid-gap-tablet;
         row-gap: 0;
-        padding-left: 32px;
-        padding-right: 32px;
+        padding: 0 $gutter-tablet;
+    }
+}
+
+@mixin grid-full-width {
+    grid-column: span $columns-desktop;
+
+    //Mobile
+    @media (max-width: $bp-mobile) {
+        grid-column: span $columns-mobile;
     }
 }

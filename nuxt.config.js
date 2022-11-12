@@ -4,12 +4,9 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Teadao',
+    title: 'Paul Haddou',
     htmlAttrs: {
       lang: 'fr'
     },
@@ -30,7 +27,8 @@ export default {
     '~/assets/styles/colors',
     '~/assets/styles/grid',
     '~/assets/styles/typography',
-    '~/assets/styles/animations'
+    '~/assets/styles/animations',
+    '~/assets/styles/global'
   ],
   styleResources: {
     scss: ['./assets/styles/*.scss']

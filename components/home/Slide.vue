@@ -15,11 +15,18 @@
         alt="Image illustrant le projet"
       >
     </div>
+    <FloatingElements
+      :project-key="projectData.key"
+      :project-particles-amount="projectData.particlesAmount"
+    />
   </div>
 </template>
 <script>
+import FloatingElements from '@/components/home/FloatingElements.vue'
+
 export default {
   components: {
+    FloatingElements
   },
   props: {
     bgWidth: {
@@ -34,16 +41,6 @@ export default {
       type: Object,
       default: () => {}
     }
-  },
-  data () {
-    return {
-    }
-  },
-  computed: {
-  },
-  mounted () {
-  },
-  methods: {
   }
 }
 </script>

@@ -28,7 +28,8 @@ export default {
     '~/assets/styles/grid',
     '~/assets/styles/typography',
     '~/assets/styles/animations',
-    '~/assets/styles/global'
+    '~/assets/styles/global',
+    '~/assets/styles/floatingElements'
   ],
   styleResources: {
     scss: ['./assets/styles/*.scss']

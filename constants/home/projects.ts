@@ -2,28 +2,19 @@ interface Projects {
     title: String;
     key: String;
     bgWidth: Number;
-    images: {
-        background: String;
-        particles: String[];
-    }
+    particlesAmount: Number;
   }
   export const PROJECTS : Projects[] = [
     {
       title: "Studio Haddou-Dufourcq",
       key: "shd",
       bgWidth: 50,
-      images: {
-        background: '',
-        particles: ['','']
-      }
+      particlesAmount: 2
     },
     {
       title: "Studio Haddou-Dufourcq",
       key: "shd",
       bgWidth: 50,
-      images: {
-        background: '',
-        particles: ['','']
-      }
+      particlesAmount: 2
     }
   ]

@@ -1,13 +1,20 @@
 <template>
   <div class="home">
-    {{ $t('home-test-message') }}
+    <Slide
+      :bg-width="50"
+      :is-even="false"
+    />
   </div>
 </template>
 
 <script>
+import Slide from '@/components/home/Slide.vue'
 
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components: {
+    Slide
+  }
 }
 </script>
 
@@ -17,9 +24,9 @@ export default {
 >
 
   .home{
-    width: 100vw;
-    height: 100vh;
+    @include grid-full-width;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: $secondary-font-family;

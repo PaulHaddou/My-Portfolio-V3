@@ -100,6 +100,7 @@ export default {
     position: fixed;
     @include grid-full-width;
     width: calc(100vw - 2 * $gutter-desktop);
+    max-width: $bp-max-width;
     //Tablet
     @media (min-width: $bp-mobile) and (max-width: $bp-tablet) {
         width: calc(100vw - 2 * $gutter-tablet);

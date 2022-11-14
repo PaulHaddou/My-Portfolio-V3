@@ -50,7 +50,7 @@
   </nav>
 </template>
 <script>
-import { NAVBAR_LINKS } from '~/constants'
+import { NAVBAR_LINKS } from '@/constants'
 
 export default {
   name: 'Navbar',

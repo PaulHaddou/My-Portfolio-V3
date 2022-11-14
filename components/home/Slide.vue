@@ -1,13 +1,20 @@
 <template>
   <div class="slide">
     <div class="slide__content" />
-    <span
+    <div
       class="slide__background"
       :class="[
-        bgWidth === 100 ? 'slide__background--fullW' : 'slide__background--halfW',
-        isEven ? 'slide__background--even' : 'slide__background--odd'
+        isEven ? 'slide__background--even' : 'slide__background--odd',
+        'slide__background--'+ projectData.key + 'Color'
       ]"
-    />
+    >
+      <img
+        class="slide__background__image"
+        :class="fullW ? 'slide__background__image--fullW' : 'slide__background__image--halfW'"
+        :src="'/assets/images/projects/'+ projectData.key + '/background.png'"
+        alt="Image illustrant le projet"
+      >
+    </div>
   </div>
 </template>
 <script>
@@ -22,6 +29,10 @@ export default {
     isEven: {
       type: Boolean,
       default: true
+    },
+    projectData: {
+      type: Object,
+      default: () => {}
     }
   },
   data () {
@@ -44,38 +55,36 @@ export default {
     width: 100%;
     height: 100vh;
     position: relative;
-    padding-top: $navbar-height;
     box-sizing: border-box;
     &__background {
         position: absolute;
+        width: 100vw;
         height: 100vh;
-        background-color: red;
-        &--fullW {
-            width: 100vw;
-        }
-        &--halfW {
-            width: 50vw;
-        }
+        display: flex;
+        left: - $gutter-desktop;
         &--even {
-            left: - $gutter-desktop;
-            //Tablet
-            @media (min-width: $bp-mobile) and (max-width: $bp-tablet) {
-                left: - $gutter-tablet;
-            }
-            //Mobile
-            @media (max-width: $bp-mobile) {
-                left: - $gutter-mobile;
-            }
+            justify-content: flex-start;
         }
         &--odd {
-            right: - $gutter-desktop;
-            //Tablet
-            @media (min-width: $bp-mobile) and (max-width: $bp-tablet) {
-                right: - $gutter-tablet;
+            justify-content: flex-end;
+        }
+        //Tablet
+        @media (min-width: $bp-mobile) and (max-width: $bp-tablet) {
+            left: - $gutter-tablet;
+        }
+        //Mobile
+        @media (max-width: $bp-mobile) {
+            left: - $gutter-mobile;
+        }
+        &__image {
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom;
+            &--fullW {
+                width: 100%;
             }
-            //Mobile
-            @media (max-width: $bp-mobile) {
-                right: - $gutter-mobile;
+            &--halfW {
+                width: 50%;
             }
         }
     }

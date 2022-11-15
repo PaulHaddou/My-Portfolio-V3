@@ -1,6 +1,9 @@
 <template>
-  <div class="slide">
-    <div class="slide__content" />
+  <div
+    class="slide"
+    :class="isEven ? 'slide--even' : 'slide--odd'"
+  >
+    <Content :project-data="projectData" />
     <div
       class="slide__background"
       :class="[
@@ -23,10 +26,12 @@
 </template>
 <script>
 import FloatingElements from '@/components/home/FloatingElements.vue'
+import Content from '@/components/home/content/Content.vue'
 
 export default {
   components: {
-    FloatingElements
+    FloatingElements,
+    Content
   },
   props: {
     bgWidth: {
@@ -53,6 +58,13 @@ export default {
     height: 100vh;
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    &--even {
+        justify-content: flex-end;
+    }
+    &--odd {
+        justify-content: flex-start;
+    }
     &__background {
         position: absolute;
         width: 100vw;

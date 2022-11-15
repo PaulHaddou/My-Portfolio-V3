@@ -29,7 +29,9 @@ export default {
     '~/assets/styles/typography',
     '~/assets/styles/animations',
     '~/assets/styles/global',
-    '~/assets/styles/floatingElements'
+    '~/assets/styles/floatingElements',
+    '~/assets/styles/titles'
+
   ],
   styleResources: {
     scss: ['./assets/styles/*.scss']

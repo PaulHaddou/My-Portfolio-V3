@@ -7,24 +7,26 @@
         :project-title="projectData.title"
         :project-key="projectData.key"
       />
+      <Informations
+        :project-title="projectData.title"
+        :project-key="projectData.key"
+      />
     </div>
   </div>
 </template>
 <script>
 import Title from '@/components/home/content/Title.vue'
+import Informations from '@/components/home/content/Informations.vue'
 export default {
   components: {
-    Title
+    Title,
+    Informations
   },
   props: {
     projectData: {
       type: Array,
       default: () => {}
     }
-    // projectParticlesAmount: {
-    //   type: Number,
-    //   default: 0
-    // }
   }
 }
 </script>

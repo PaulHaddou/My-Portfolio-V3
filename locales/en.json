@@ -6,5 +6,22 @@
       "resume": "Resume",
       "linkedin": "Linkedin"
     }
+  },
+  "home": {
+    "projects": {
+      "shd": {
+        "content": {
+          "description": "This project was intended to introduce us to the basics of motion. We had a week of introductory courses in the use of after effect. The goal was to be able to make a short video of a dozen seconds. This motion is the result of this week.",
+          "jobs": {
+            "title": "Postes",
+            "subtitle": "Dev Front - Webmaster"
+          },
+          "tools": {
+            "title": "Langages",
+            "subtitle": "PHP - JS - SCSS"
+          }
+        }
+      }
+    }
   }
 }

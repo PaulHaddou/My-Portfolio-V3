@@ -6,5 +6,22 @@
       "resume": "CV",
       "linkedin": "Linkedin"
     }
+  },
+  "home": {
+    "projects": {
+      "shd": {
+        "content": {
+          "description": "Ce projet avait pour intention de nous initier aux bases du motion. Nous avons donc pendant une semaine eu des cours initiatiques à l’utilisation d’after effect. Le but était de pouvoir réaliser une courte vidéo d’une dizaines de secondes. Ce motion est le résultat de cette semaine.",
+          "jobs": {
+            "title": "Postes",
+            "subtitle": "Dev Front - Webmaster"
+          },
+          "tools": {
+            "title": "Langages",
+            "subtitle": "PHP - JS - SCSS"
+          }
+        }
+      }
+    }
   }
 }

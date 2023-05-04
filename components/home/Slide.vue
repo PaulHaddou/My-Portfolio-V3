@@ -71,6 +71,7 @@ export default {
         height: 100vh;
         display: flex;
         left: - $gutter-desktop;
+        align-items: flex-end;
         &--even {
             justify-content: flex-start;
         }
@@ -88,12 +89,13 @@ export default {
         &__image {
             height: 100%;
             object-fit: contain;
-            object-position: bottom;
+            object-position: right bottom;
             &--fullW {
                 width: 100%;
             }
             &--halfW {
                 width: 50%;
+                max-height: 80vh;
             }
         }
     }
